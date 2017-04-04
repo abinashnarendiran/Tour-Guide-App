@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+      <!--Home Tab-->
+      <Tab text="Home">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="327.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@images/home.png" />
+                          </image>
+                      </ImageView>
+                  <Button layoutX="603.0" layoutY="29.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+                  </children>
+              </AnchorPane>
+          </content>
+      </Tab>
+
+      <!--Current Location Tab-->
+      <Tab text="Current Location">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+
+      <!--Restaurants Tab-->
+      <Tab text="Restaurants">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="219.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="322.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/coffee.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="323.0" layoutY="139.0" mnemonicParsing="false" onAction="#Restaurants" text="Search" />
+               </children>
+            </AnchorPane>
+      </content>
+         <tooltip>
+            <Tooltip text="Are you hungry? Check out some amazing restaurants nearby." />
+         </tooltip>
+      </Tab>
+
+      <!--Parks Tab-->
+      <Tab text="Parks">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="172.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="324.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/park.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="325.0" layoutY="143.0" mnemonicParsing="false" onAction="#Parks" text="Search" />
+               </children>
+              </AnchorPane>
+          </content>
+         <tooltip>
+            <Tooltip text="Great parks for your outdoor activities." />
+         </tooltip>
+      </Tab>
+
+      <!--Shopping Tab-->
+      <Tab text="Shopping">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="321.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/store.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="323.0" layoutY="143.0" mnemonicParsing="false" onAction="#Shopping" text="Search" />
+               </children>
+            </AnchorPane>
+      </content>
+         <tooltip>
+            <Tooltip text="Feel like shopping? Check out these popular nearby malls." />
+         </tooltip>
+      </Tab>
+
+      <!--Gas Tab-->
+      <Tab text="Gas">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="322.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@images/gas.png" />
+                          </image>
+                      </ImageView>
+                  <Button layoutX="323.0" layoutY="146.0" mnemonicParsing="false" onAction="#Gas" text="Search" />
+                  </children>
+              </AnchorPane>
+          </content>
+         <tooltip>
+            <Tooltip text="Nearby gas stations to fill up." />
+         </tooltip>
+      </Tab>
+
+      <!--Hotels Tab-->
+      <Tab text="Hotels">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="319.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hotel.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="323.0" layoutY="129.0" mnemonicParsing="false" onAction="#Hotels" text="Search" />
+               </children>
+              </AnchorPane>
+          </content>
+         <tooltip>
+            <Tooltip text="Checkout these wonderful five star hotels near you!" />
+         </tooltip>
+      </Tab>
+
+      <!--Banks Tab-->
+      <Tab text="Banks">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="319.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/money.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="323.0" layoutY="144.0" mnemonicParsing="false" onAction="#Bank" text="Search" />
+               </children>
+            </AnchorPane>
+         </content>
+         <tooltip>
+            <Tooltip text="In need of money? Find banks near you." />
+         </tooltip>
+      </Tab>
+    </tabs>
+</TabPane>
