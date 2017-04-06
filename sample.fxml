@@ -147,7 +147,7 @@
                         <Image url="@images/coffee.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Restaurants" text="Search" />
                </children>
             </AnchorPane>
       </content>
@@ -166,7 +166,7 @@
                         <Image url="@images/park.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Parks" text="Search" />
                </children>
               </AnchorPane>
           </content>
@@ -185,7 +185,7 @@
                         <Image url="@images/store.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Shopping" text="Search" />
                </children>
             </AnchorPane>
       </content>
@@ -199,12 +199,12 @@
           <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                      <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="322.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                      <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="323.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                           <image>
                               <Image url="@images/gas.png" />
                           </image>
                       </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Gas" text="Search" />
                   </children>
               </AnchorPane>
           </content>
@@ -223,7 +223,7 @@
                         <Image url="@images/hotel.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Hotels" text="Search" />
                </children>
               </AnchorPane>
           </content>
@@ -242,7 +242,7 @@
                         <Image url="@images/money.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+                  <Button layoutX="324.0" layoutY="330.0" mnemonicParsing="false" onAction="#Bank" text="Search" />
                </children>
             </AnchorPane>
          </content>
@@ -255,14 +255,20 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
                <children>
-                  <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="300.0" layoutX="42.0" layoutY="105.0" />
-                  <Button layoutX="140.0" layoutY="289.0" mnemonicParsing="false" onAction="#play" text="Play" />
-                  <Button layoutX="184.0" layoutY="289.0" mnemonicParsing="false" onAction="#pause" text="Pause" />
-                  <Button layoutX="496.0" layoutY="289.0" mnemonicParsing="false" onAction="#pause2" text="Pause" />
-                  <Button layoutX="453.0" layoutY="289.0" mnemonicParsing="false" onAction="#play2" text="Play" />
-                  <MediaView fx:id="mediaView2" fitHeight="300.0" fitWidth="300.0" layoutX="347.0" layoutY="105.0" />
-                  <Label layoutX="146.0" layoutY="76.0" text="Beijing, China" />
-                  <Label layoutX="464.0" layoutY="76.0" text="Rome, Italy" />
+                  <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="300.0" layoutX="40.0" layoutY="157.0" />
+                  <Button layoutX="138.0" layoutY="341.0" mnemonicParsing="false" onAction="#play" text="Play" />
+                  <Button layoutX="182.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause" text="Pause" />
+                  <Button layoutX="510.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause2" text="Pause" />
+                  <Button layoutX="467.0" layoutY="341.0" mnemonicParsing="false" onAction="#play2" text="Play" />
+                  <MediaView fx:id="mediaView2" fitHeight="300.0" fitWidth="300.0" layoutX="361.0" layoutY="157.0" />
+                  <Label layoutX="144.0" layoutY="128.0" text="Beijing, China" />
+                  <Label layoutX="478.0" layoutY="128.0" text="Rome, Italy" />
+                  <Label layoutX="279.0" layoutY="411.0" text="More Videos Coming Soon!" />
+                  <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="316.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/video.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
          </content>
       </Tab>

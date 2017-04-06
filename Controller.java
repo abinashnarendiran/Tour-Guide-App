@@ -4,16 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
-import javafx.stage.Stage;
 import javafx.fxml.*;
 
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable{
-
-    Stage stage;
+public class Controller implements Initializable {
 
     @FXML
     private MediaView mediaView;
@@ -24,7 +21,6 @@ public class Controller implements Initializable{
     private MediaView mediaView2;
     private MediaPlayer mediaPlayer2;
     private Media media2;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -57,18 +53,34 @@ public class Controller implements Initializable{
         mediaPlayer2.pause();
     }
 
-    public void setStage(Stage stage){
-
-        this.stage = stage;
-    }
-
-    @FXML
-    public void Search(ActionEvent e) throws IOException {
-
-    }
 
     @FXML
     public void Logout(ActionEvent e) throws IOException {
+
+    }
+
+
+    public void Parks(ActionEvent e)throws IOException{
+
+    }
+
+    public void Gas(ActionEvent e)throws IOException{
+
+    }
+
+    public void Restaurants(ActionEvent e)throws IOException{
+
+    }
+
+    public void Hotels(ActionEvent e)throws IOException{
+
+    }
+
+    public void Bank(ActionEvent e)throws IOException{
+
+    }
+
+    public void Shopping(ActionEvent e)throws IOException{
 
     }
 }
