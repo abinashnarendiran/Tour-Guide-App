@@ -129,6 +129,23 @@ public class Controller{
                     FileReader fr = new FileReader(file);
                     BufferedReader br = new BufferedReader(fr);
                     String line;
+                    if (fnameField.getText().equals("")||lnameField.getText().equals("")||emailField.getText().equals("")|| usernameField.getText().equals("") || passwordField.getText().equals(""))
+                    {
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Error Message");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Entry/Entries are empty");
+
+                        alert.showAndWait();
+                        bw.write(" ");
+                        bw.flush();
+                        bw.close();
+                        usernameField.setText("");
+                        passwordField.setText("");
+                        emailField.setText("");
+                        fnameField.setText("");
+                        lnameField.setText("");
+                    }
                     if (validate(email) != true)
                     {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -148,15 +165,15 @@ public class Controller{
                     }
                     while ((line = br.readLine()) != null) {
                         if (line.trim().length() != 0) {
-                            String[] dataFields = line.split(" ");
+                            String[] dataFields = line.split("~");
                             for (int i = 0; i < dataFields.length; i++) {
                                 if (dataFields[0].equals(firstName) || dataFields[1].equals(lastName))
                                 {
                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                     alert.setTitle("Error Message");
                                     alert.setHeaderText(null);
-                                    alert.setContentText("Name has been registered into our system, if forgotten username"
-                                            + " click on the forgot username link");
+                                    alert.setContentText("User has been registered into our system.");
+                                           // + "if forgotten username" + " click on the forgot username link");
 
                                     alert.showAndWait();
                                     bw.write(" ");
@@ -197,22 +214,22 @@ public class Controller{
                 System.out.println(username);
                 System.out.println(password);
                 */
-                        bw.write(firstName + " " + lastName + " " + email + " " + username + " " + hashedPassword + "\n");
+                        bw.write(firstName + "~" + lastName + "~" + email + "~" + username + "~" + hashedPassword + "\n");
+                        usernameField.setText("");
+                        passwordField.setText("");
+                        emailField.setText("");
+                        fnameField.setText("");
+                        lnameField.setText("");
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Successfully created User, returning back to the main screen... ");
+                        alert.showAndWait();
                         bw.flush();
                         bw.close();
                         form.close();
                 }
                 catch (java.io.IOException ioE){System.out.println(ioE);}
-                usernameField.setText("");
-                passwordField.setText("");
-                emailField.setText("");
-                fnameField.setText("");
-                lnameField.setText("");
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("");
-                alert.setHeaderText(null);
-                alert.setContentText("Successfully created User, returning back to the main screen... ");
-                alert.showAndWait();
 
                 //Scene mScreen = new Scene(, 600, 600);
             }
@@ -267,7 +284,6 @@ public class Controller{
 
                 String username = usernameField.getText();
                 String password = passwordField.getText();
-
                 try {
                     MessageDigest md = MessageDigest.getInstance("SHA-256");
                     md.update(password.getBytes());
@@ -291,9 +307,18 @@ public class Controller{
                     boolean in=false,wrongPass=false;
                     while ((line = br.readLine()) != null) {
                         if (line.trim().length() != 0) {
-                            String[] Fields = line.split(" ");
-                                if (Fields[3].equals(username) && Fields[4].equals(hashedPassword)) {
+                            String[] Fields = line.split("~");
+                            //System.out.println(Fields[3]);
+                            //System.out.println(Fields[4]);
+                            boolean isUser = Fields[3].equals(username);
+                            boolean isPass = Fields[4].equals(hashedPassword);
+                            if(usernameField.getText().equals("")|| passwordField.getText().equals(""))
+                            {
+                                wrongPass = true;
+                            }
+                                if (isUser && isPass) {
                                     in=true;
+                                    wrongPass = false;
                                     break;
                                     /*
                                     try {
@@ -305,9 +330,8 @@ public class Controller{
 
                                     //login.setScene();
                                 }
-                                else if (!Fields[3].equals(username) && !Fields[4].equals(hashedPassword)){
-                                    wrongPass=true;
-                                    break;
+                                else if (!isUser || !isPass){
+                                    wrongPass = true;
                                 }
                         }
                     }
