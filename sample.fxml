@@ -21,6 +21,7 @@
                               <Image url="@images/home.png" />
                           </image>
                       </ImageView>
+                  <!--Accordian Tabs of each of the popular cities-->
                   <Accordion layoutY="84.0" prefHeight="389.0" prefWidth="700.0">
                     <panes>
                       <TitledPane animated="false" prefHeight="177.0" prefWidth="232.0" text="Beijing, China" textFill="#207ce5">
@@ -250,25 +251,53 @@
             <Tooltip text="In need of money? Find banks near you." />
          </tooltip>
       </Tab>
-      
+
+      <!--Video Tours-->
       <Tab text="Video Tours">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
                <children>
                   <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="300.0" layoutX="40.0" layoutY="157.0" />
-                  <Button layoutX="138.0" layoutY="341.0" mnemonicParsing="false" onAction="#play" text="Play" />
-                  <Button layoutX="182.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause" text="Pause" />
-                  <Button layoutX="510.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause2" text="Pause" />
-                  <Button layoutX="467.0" layoutY="341.0" mnemonicParsing="false" onAction="#play2" text="Play" />
-                  <MediaView fx:id="mediaView2" fitHeight="300.0" fitWidth="300.0" layoutX="361.0" layoutY="157.0" />
+                  <MediaView fx:id="mediaViewTwo" fitHeight="300.0" fitWidth="300.0" layoutX="361.0" layoutY="157.0" />
+                  <Button layoutX="41.0" layoutY="341.0" mnemonicParsing="false" onAction="#play" text="Play" />
+                  <Button layoutX="85.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause" text="Pause" />
+                  <Button layoutX="405.0" layoutY="341.0" mnemonicParsing="false" onAction="#pause2" text="Pause" />
+                  <Button layoutX="362.0" layoutY="341.0" mnemonicParsing="false" onAction="#play2" text="Play" />
                   <Label layoutX="144.0" layoutY="128.0" text="Beijing, China" />
                   <Label layoutX="478.0" layoutY="128.0" text="Rome, Italy" />
-                  <Label layoutX="279.0" layoutY="411.0" text="More Videos Coming Soon!" />
+                  <Label layoutX="279.0" layoutY="431.0" text="More Videos Coming Soon!" />
                   <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="316.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/video.png" />
                      </image>
                   </ImageView>
+                  <Button layoutX="306.0" layoutY="341.0" mnemonicParsing="false" onAction="#maxSize">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/fullscreen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="627.0" layoutY="341.0" mnemonicParsing="false" onAction="#maxSizeTwo">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/fullscreen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minSize" layoutX="627.0" layoutY="354.0" mnemonicParsing="false" onAction="#minSize" prefHeight="36.0" prefWidth="49.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/fullscreen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children></AnchorPane>
          </content>
       </Tab>
