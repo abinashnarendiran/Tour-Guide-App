@@ -15,16 +15,16 @@ Shubham Patel (shubsb),                                                         
 
 References
 
-https://en.wikipedia.org/wiki/Beijing
-https://en.wikipedia.org/wiki/Rome
-https://en.wikipedia.org/wiki/Rio_de_Janeiro
-https://en.wikipedia.org/wiki/Agra
-https://en.wikipedia.org/wiki/Dubai
-https://en.wikipedia.org/wiki/Paris
-https://en.wikipedia.org/wiki/Toronto
+https://en.wikipedia.org/wiki/Beijing,
+https://en.wikipedia.org/wiki/Rome,
+https://en.wikipedia.org/wiki/Rio_de_Janeiro,
+https://en.wikipedia.org/wiki/Agra,
+https://en.wikipedia.org/wiki/Dubai,
+https://en.wikipedia.org/wiki/Paris,
+https://en.wikipedia.org/wiki/Toronto,
 
 
 Videos Used
 
-https://www.youtube.com/watch?v=JspegfuYtQY
-https://www.youtube.com/watch?v=DEJx0CYrDHk
+https://www.youtube.com/watch?v=JspegfuYtQY,
+https://www.youtube.com/watch?v=DEJx0CYrDHk,
