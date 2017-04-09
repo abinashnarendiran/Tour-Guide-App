@@ -33,5 +33,10 @@ https://en.wikipedia.org/wiki/Toronto,
 
 Videos Used
 
-https://www.youtube.com/watch?v=JspegfuYtQY,
-https://www.youtube.com/watch?v=DEJx0CYrDHk,
+https://www.youtube.com/embed/JspegfuYtQY,
+https://www.youtube.com/embed/S6pwzvoEhoU,
+https://www.youtube.com/embed/DEJx0CYrDHk,
+https://www.youtube.com/embed/ieWNzZPfZzk,
+https://www.youtube.com/embed/nPOO1Coe2DI,
+https://www.youtube.com/embed/AQ6GmpMu5L8,
+https://www.youtube.com/embed/7uY0Ab5HlZ0
