@@ -12,8 +12,13 @@ We could not implement the current location, so we could not generate the neares
 
 In order to run our application, you must got to the terminal and direct the terminal to where the folder where the program has been cloned to. Then once you get to the
 folder, type in gradle run, if that doesn't work, type in gradle classes first, gradle build second, and gradle run third to run the program.
+
+
 Group memebers with github usernames:
-Shubham Patel (shubsb),                                                                                                     Ajevan Mahadaya (Ajevan),                                                                                                  Abinash Narendiran (abinashnarendiran),                                                                               Saijeeshan Ketheeswaran (saijeeshanketheeswaran)
+Shubham Patel (shubsb),                                                                                       
+Ajevan Mahadaya (Ajevan),                                                                                                  
+Abinash Narendiran (abinashnarendiran),                                                                               
+Saijeeshan Ketheeswaran (saijeeshanketheeswaran)
 
 References
 
