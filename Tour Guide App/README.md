@@ -15,8 +15,8 @@ folder, type in gradle run, if that doesn't work, type in gradle classes first, 
 
 
 Group memebers with github usernames:                                                                                       
-Shubham Patel (shubsb)
-Ajevan Mahadaya (Ajevan),                                                                                                  
+Shubham Patel (shubsb),
+Ajevan Mahadaya (Ajevan),                                                                                        
 Abinash Narendiran (abinashnarendiran),                                                                               
 Saijeeshan Ketheeswaran (saijeeshanketheeswaran)
 
