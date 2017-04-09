@@ -1,0 +1,283 @@
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+<TabPane xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" fx:controller="sample.Controller">
+    <tabs>
+        <!-- Home Tab -->
+        <Tab text="Home">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="327.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/home.png"/>
+                            </image>
+                        </ImageView>
+                        <!-- Accordian Tabs of each of the popular cities -->
+                        <Accordion layoutY="84.0" prefHeight="389.0" prefWidth="700.0">
+                            <panes>
+                                <TitledPane animated="false" prefHeight="177.0" prefWidth="232.0" text="Beijing, China" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="213.0" fitWidth="354.0" layoutX="-1.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@images/China.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="353.0" prefHeight="216.0" prefWidth="345.0" text=" One of the most popular travel destinations in the world, with about 140 million Chinese tourists and 4.4 million international visitors in a year. Main Attractions: Great Wall of China Forbidden City "/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Rome, Italy" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="230.0" fitWidth="353.0" layoutX="-1.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@images/Italy.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="349.0" prefHeight="216.0" prefWidth="350.0" text=" Rome is the capital city of Italy and also the largest city in the country. The city is famed for its history, architecture and food. Rome today is one of the most popular tourist destinations of the world, due to the incalculable immensity of its archaeological and art treasures. Main Attractions: Colosseum Pantheon "/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Rio de Janeiro, Brazil" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="458.0">
+                                            <children>
+                                                <ImageView fitHeight="247.0" fitWidth="357.0" layoutX="-2.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@/images/Brazil.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="355.0" layoutY="-1.0" prefHeight="217.0" prefWidth="346.0" text=" Rio de Janeiro is the capital of the Brazilian State of Rio de Janeiro and the third largest metropolis in the country with a population of 6.3 million people. Home to many beautiful trees and nature reserves Main Attractions: Christ the Redeemer Copacabana "/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" layoutX="10.0" layoutY="60.0" text="Agra, India" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="213.0" fitWidth="350.0" layoutX="-1.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@/images/India.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="349.0" layoutY="-1.0" prefHeight="215.0" prefWidth="351.0" text=" India offers its treasure trove for all the tourists from India and abroad. The city stands in testimony to the great amount of architectural activity of the Mughals. Main Attractions: Taj Mahal Mehtab Bagh"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" layoutX="10.0" layoutY="135.0" prefHeight="136.0" prefWidth="598.0" text="Dubai, United Arab Emirates" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="217.0" fitWidth="353.0" layoutX="-1.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@/images/UAE.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="348.0" layoutY="-5.0" prefHeight="220.0" prefWidth="350.0" text=" One of the United Arab Emirates' seven emirates, Dubai has transformed from a small fishing village and pearling center to a regional transport and tourism center for the Middle East. Home to a large expatriate community and has a well-developed tourist infrastructure. Main Attractions: Burj Khalifa Palm Islands"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="Paris, France" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="212.0" fitWidth="356.0" layoutX="-1.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@/images/France.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="355.0" layoutY="-1.0" prefHeight="218.0" prefWidth="347.0" text=" Paris is by far the largest city in France. The city attracts many tourists from nearby countries such Italy. Paris also attracts visitors from much further away. More than 20 million people in total are said to come to this city each year. There are more than 50 museums in Paris. Main Attractions: Eiffel Tower Notre Dame de Paris "/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" prefHeight="177.0" prefWidth="314.0" text="Toronto, Canada" textFill="#207ce5">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="228.0" fitWidth="351.0" layoutX="-1.0" layoutY="-10.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@/images/Canada.jpg"/>
+                                                    </image>
+                                                </ImageView>
+                                                <TextArea editable="false" layoutX="350.0" prefHeight="215.0" prefWidth="350.0" text="As the nation's cultural heartland, Toronto hosts international audiences at a wide variety of arts and sporting events in world class facilities. Toronto is the leading tourism destination in Canada, attracting more than 25 million Canadian, American and international visitors annually. Main Attractions: CN Tower Royal Ontario Museum"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                        <Label contentDisplay="TEXT_ONLY" layoutX="25.0" layoutY="60.0" text="Popular Destinations"/>
+                        <Button layoutX="603.0" layoutY="29.0" mnemonicParsing="false" onAction="#Logout" text="Logout"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <!-- Direction Tab -->
+        <Tab text="Directions">
+            <content>
+                <AnchorPane id="AnchorPane" prefHeight="500" prefWidth="800">
+                    <children>
+                        <GoogleMapView fx:id="mapView" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        <TextField fx:id="fromTextField" prefHeight="27.0" prefWidth="222.0" promptText="From: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0"/>
+                        <TextField fx:id="toTextField" layoutX="10.0" layoutY="10.0" onAction="#toTextFieldAction" prefHeight="27.0" prefWidth="222.0" promptText="To:" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="120.0"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <!-- Restaurants Tab -->
+        <Tab text="Restaurants">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="219.0">
+                    <children>
+                        <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="322.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/coffee.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="30.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/Mcdonalds.jpg"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="390.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/Starbucks.jpg"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="220.0" layoutY="400" text="Depending on the city or location restaurants may vary."/>
+                    </children>
+                </AnchorPane>
+            </content>
+            <tooltip>
+                <Tooltip text="Are you hungry? Check out some amazing restaurants nearby."/>
+            </tooltip>
+        </Tab>
+        <!-- Parks Tab -->
+        <Tab text="Parks">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="172.0">
+                    <children>
+                        <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="322.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/park.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="30.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/Swiss.jpg"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="390.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/Chinapark.jpg"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="220.0" layoutY="400" text="Depending on the city or location parks may vary."/>
+                    </children>
+                </AnchorPane>
+            </content>
+            <tooltip>
+                <Tooltip text="Great parks for your outdoor activities."/>
+            </tooltip>
+        </Tab>
+        <!-- Shopping Tab -->
+        <Tab text="Shopping">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="322.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/store.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="30.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/indiaMall.jpg"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="390.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/torontoMall.jpg"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="220.0" layoutY="400" text="Depending on the city or location malls may vary."/>
+                    </children>
+                </AnchorPane>
+            </content>
+            <tooltip>
+                <Tooltip text="Feel like shopping? Check out these popular nearby malls."/>
+            </tooltip>
+        </Tab>
+        <!-- Hotels Tab -->
+        <Tab text="Hotels">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
+                    <children>
+                        <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="322.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/hotel.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="30.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/marriotHotel.jpg"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="285.0" layoutX="390.0" layoutY="150.0" pickOnBounds="true" preserveRatio="false">
+                            <image>
+                                <Image url="@/images/tallHotel.jpg"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="220.0" layoutY="400" text="Depending on the city or location hotels may vary."/>
+                    </children>
+                </AnchorPane>
+            </content>
+            <tooltip>
+                <Tooltip text="Checkout these wonderful five star hotels near you!"/>
+            </tooltip>
+        </Tab>
+        <!-- Video Tours -->
+        <Tab text="Video Tours">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="174.0">
+                    <children>
+                        <WebView fx:id="webView" layoutX="14.0" layoutY="14.0" prefHeight="396.0" prefWidth="671.0"/>
+                        <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#beijVid" text="Beijing"/>
+                        <Button layoutX="111.0" layoutY="425.0" mnemonicParsing="false" onAction="#RomeVid" text="Rome"/>
+                        <Button layoutX="205.0" layoutY="425.0" mnemonicParsing="false" onAction="#RioVid" text="Rio de Janeiro"/>
+                        <Button layoutX="350.0" layoutY="425.0" mnemonicParsing="false" onAction="#AgraVid" text="Agra"/>
+                        <Button layoutX="435.0" layoutY="425.0" mnemonicParsing="false" onAction="#DubaiVid" text="Duba"/>
+                        <Button layoutX="525.0" layoutY="425.0" mnemonicParsing="false" onAction="#ParisVid" text="Paris"/>
+                        <Button layoutX="623.0" layoutY="425.0" mnemonicParsing="false" onAction="#TorontoVid" text="Toronto"/>
+                        <Label layoutX="266.0" layoutY="204.0" text="Click on button to play video."/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+    <stylesheets>
+        <URL value="@register.css"/>
+    </stylesheets>
+</TabPane>
