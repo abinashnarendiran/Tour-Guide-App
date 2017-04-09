@@ -7,6 +7,7 @@ import com.sun.javafx.scene.control.behavior.PasswordFieldBehavior;
 
 /**
  * Password field skin.
+ * This is the class used to mask the password into bullets
  */
 public class PasswordSkin extends TextFieldSkin {
     public static final char BULLET = '\u2022';

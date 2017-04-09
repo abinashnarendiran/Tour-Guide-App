@@ -26,7 +26,8 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+//This is the log-in controller class, this controller is used in the sample.fxml file
+//This controller handles the user creation and the user log-in into the application
 public class Controller{
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
@@ -42,10 +43,14 @@ public class Controller{
     public void initialize() throws Exception{
 
     }
+    //This validate functions checks to see if there is a valid email entered in the e-mail field of the User Creation
     public static boolean validate(String email) {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
         return matcher.find();
     }
+    //This function is used whenever the create User button is clicked
+    //This function successfully creates the user and writes it to a database file
+    //where it is read for log-in purposes
     public void cuser(ActionEvent event) throws Exception{
         Stage form = new Stage();
         GridPane editArea = new GridPane();
@@ -85,23 +90,22 @@ public class Controller{
         final PasswordField passwordField2 = new PasswordField();
 
         CheckBox checkBox = new CheckBox("Show/Hide password");
-        // Bind properties. Toggle textField and passwordField
-        // visibility and managability properties mutually when checkbox's state is changed.
-        // Because we want to display only one component (textField or passwordField)
-        // on the scene at a time.
+        //This bind properties and visible properties are used so that when the user
+        //clicks the checkbox, it will seamlessly display the password masked by bullets
         passwordField.managedProperty().bind(checkBox.selectedProperty());
         passwordField.visibleProperty().bind(checkBox.selectedProperty());
 
         passwordField2.managedProperty().bind(checkBox.selectedProperty().not());
         passwordField2.visibleProperty().bind(checkBox.selectedProperty().not());
 
-        // Bind the textField and passwordField text values bidirectionally.
+        //This will bind both properties to the text field
         passwordField.textProperty().bindBidirectional(passwordField2.textProperty());
         editArea.add(passwordField,1, 4);
         editArea.add(passwordField2, 1,4);
         editArea.add(checkBox, 1,6);
 
-
+        //This is the button that is clicked whenever the user wants to create a user
+        //to log into the system
         Button addButton = new Button("Create User");
         addButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e){
@@ -112,6 +116,8 @@ public class Controller{
 
                     String username = usernameField.getText();
                     String password = passwordField.getText();
+                    //This try catch block converts the string to SHA-256, which hashes the string into an encrypted
+                    //string which is then stored in the database
                     try {
                         MessageDigest md = MessageDigest.getInstance("SHA-256");
                         md.update(password.getBytes());
@@ -129,6 +135,7 @@ public class Controller{
                     FileReader fr = new FileReader(file);
                     BufferedReader br = new BufferedReader(fr);
                     String line;
+                    //This checks to see if the user has missed any entries
                     if (fnameField.getText().equals("")||lnameField.getText().equals("")||emailField.getText().equals("")|| usernameField.getText().equals("") || passwordField.getText().equals(""))
                     {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -146,6 +153,7 @@ public class Controller{
                         fnameField.setText("");
                         lnameField.setText("");
                     }
+                    //This checks if the e-mail entered is valid
                     if (validate(email) != true)
                     {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -163,6 +171,7 @@ public class Controller{
                         fnameField.setText("");
                         lnameField.setText("");
                     }
+                    //This while loop checks to see if the user has been already placed in the database
                     while ((line = br.readLine()) != null) {
                         if (line.trim().length() != 0) {
                             String[] dataFields = line.split("~");
@@ -214,6 +223,8 @@ public class Controller{
                 System.out.println(username);
                 System.out.println(password);
                 */
+                        //Finally, this is where the user is stored in the database, where it displays that it successfully
+                        //created the user and returns back to the main screen
                         bw.write(firstName + "~" + lastName + "~" + email + "~" + username + "~" + hashedPassword + "\n");
                         usernameField.setText("");
                         passwordField.setText("");
@@ -229,9 +240,8 @@ public class Controller{
                         bw.close();
                         form.close();
                 }
-                catch (java.io.IOException ioE){System.out.println(ioE);}
+                catch (java.io.IOException ioE){/*System.out.println(ioE);*/}
 
-                //Scene mScreen = new Scene(, 600, 600);
             }
         });
         editArea.add(addButton, 24, 42);
@@ -242,7 +252,9 @@ public class Controller{
         form.setScene(scene);
         form.show();
     }
-
+    //This function is used whenever the login button is clicked
+    //This function successfully logs the user into the application
+    //once the credentials are checked and confirmed that it is correct
     public void login(ActionEvent event) throws Exception{
         Stage login = new Stage();
         GridPane editArea = new GridPane();
@@ -258,26 +270,25 @@ public class Controller{
         Label passwordLabel = new Label("Password:");
         editArea.add(passwordLabel, 0, 2);
         TextField passwordField = new TextField();
-        // Actual password field
+        //Actual password field
         final PasswordField passwordField2 = new PasswordField();
 
         CheckBox checkBox = new CheckBox("Show/Hide password");
-        // Bind properties. Toggle textField and passwordField
-        // visibility and managability properties mutually when checkbox's state is changed.
-        // Because we want to display only one component (textField or passwordField)
-        // on the scene at a time.
+        //This bind properties and visible properties are used so that when the user
+        //clicks the checkbox, it will seamlessly display the password masked by bullets
         passwordField.managedProperty().bind(checkBox.selectedProperty());
         passwordField.visibleProperty().bind(checkBox.selectedProperty());
 
         passwordField2.managedProperty().bind(checkBox.selectedProperty().not());
         passwordField2.visibleProperty().bind(checkBox.selectedProperty().not());
 
-        // Bind the textField and passwordField text values bidirectionally.
+        //This will bind both properties to the text field
         passwordField.textProperty().bindBidirectional(passwordField2.textProperty());
         editArea.add(passwordField, 1, 2);
         editArea.add(passwordField2, 1,2);
-        editArea.add(checkBox, 1,4);
-
+        editArea.add(checkBox, 1,3);
+        //This is the button that is clicked whenever the user wants to log-in to the
+        //application
         Button addButton = new Button("Log In");
         addButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
