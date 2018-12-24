@@ -1,6 +1,5 @@
-# csci2020u_finalproject
+# Travel Guide App
 
-Travel Guide App
 
 Description: 
 This is a basic travel guide application that runs on desktop. In order to access the features of this app, you have to create an account if not created. This app shows descriptions and video tours on major cities around the world. It also has a location map for directions, tabs for restaurants, parks, hotels and shopping places.
